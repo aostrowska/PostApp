@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "eslint": "^4.16.0",
+    "firebase": "^4.9.0",
     "history": "^4.7.2",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
