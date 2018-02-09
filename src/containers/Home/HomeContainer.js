@@ -1,12 +1,14 @@
 import React, { PureComponent, Fragment } from 'react'
-import firebase from 'firebase'
+import { firebaseDB } from '../../api/firebase'
+
+import { speedValue } from '../../api/spped'
 
 class Home extends PureComponent {
   constructor() {
     super()
 
-    this.testDatabase = firebase.database().ref('test')
-    this.speedValue = this.testDatabase.child('speed')
+    this.testDatabase = firebaseDB
+    this.speedValue = speedValue
 
     this.state = {
       speed: 0,

@@ -1,9 +1,5 @@
-import firebase from 'firebase'
+import { all } from 'redux-saga/effects'
 
-function* getSpeedValue() {
-  // const testDatabase = firebase.database().ref('test')
-
-  // try {
-  //   const speedValue = yield testDatabase.child('speed')
-  // }
+export default function* rootSaga() {
+  yield all([])
 }
