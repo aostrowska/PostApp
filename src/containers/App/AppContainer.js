@@ -1,9 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux'
-import { Route, Link } from 'react-router-dom'
+import { Route, Link, withRouter } from 'react-router-dom'
 
 import Home from '../Home/HomeContainer'
+import Routes from './routes'
 
 import { markAppAsLoaded } from '../../actions/app'
 
@@ -16,9 +17,7 @@ const App = (props) => {
         <Link to="/">Home</Link>
       </header>
 
-      <main>
-        <Route exact path="/" component={Home} />
-      </main>
+      <Route component={Routes} />
     </div>
   )
 }
@@ -31,4 +30,4 @@ const mapDispatchToProps = {
   markAppAsLoaded
 };
 
-export default connect(null, mapDispatchToProps)(App)
+export default withRouter(connect(null, mapDispatchToProps)(App))
