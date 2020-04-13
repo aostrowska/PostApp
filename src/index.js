@@ -6,18 +6,14 @@ import { ConnectedRouter } from 'react-router-redux'
 import store, { history } from './store'
 import registerServiceWorker from './registerServiceWorker'
 
-import App from './containers/App/AppContainer'
-
-import './index.css'
+import AppContainer from './containers/App/AppContainer'
 
 const target = document.querySelector('#root')
 
 render(
   <Provider store={store}>
     <ConnectedRouter history={history}>
-      <div>
-        <App />
-      </div>
+      <AppContainer />
     </ConnectedRouter>
   </Provider>,
   target
